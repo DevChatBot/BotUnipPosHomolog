@@ -44,7 +44,7 @@
     paramChatConcat = paramChat;
     let cronchatToken = '1973740492:AAFjG6RUJPL_y76hlGP5ImycDHFAA5WWa_M';
     let hostURL = 'https://cronchatcronapp.cronapp.io/get-chat?token=';
-    let chatbotURL = ${hostURL}${cronchatToken}&extraparam=${paramChatConcat};
+    let chatbotURL = `${hostURL}${cronchatToken}&extraparam=${paramChatConcat}`;
     let scriptHTML = document.createElement("script");
     scriptHTML.src = chatbotURL;
     scriptHTML.type = 'text/javascript'
@@ -58,7 +58,7 @@
        }
     }
     function clickBtnChat(){
-        var btnConversationId = 'chatBtn' + localStorage.getItem('conversationidbot');
+        var btnConversationId = 'chatBtn_' + localStorage.getItem('conversationidbot');
         document.getElementById(btnConversationId).click();
 }
 </script>
